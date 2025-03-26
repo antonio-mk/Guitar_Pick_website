@@ -7,17 +7,21 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+    </ul>
+  </nav>
+
   <div class="container">
     <!-- Content on the Left -->
-    <div class="content">
+    <div class="content" id="home">
       <h1>Guitar Pick Grip</h1>
       <p>Introducing the revolutionary Guitar Pick Grip, designed for individuals with partial hand loss. 
          Our ergonomic design ensures a comfortable and secure grip for users, allowing them to enjoy playing their favorite instrument.</p>
-      
-      <h2>Customize Your Grip</h2>
-      <p>Choose a color for your guitar pick grip:</p>
-      <input type="color" id="colorPicker" value="#ff0000">
-      
+
       <h2>Why Choose Our Guitar Pick Grip?</h2>
       <ul>
         <li>Designed for individuals with partial hand loss.</li>
@@ -29,8 +33,7 @@
       <blockquote>"This grip has made it possible to play guitar again!" – Sarah D.</blockquote>
       <blockquote>"It’s a game-changer for people with hand difficulties." – John P.</blockquote>
 
-      <h2>Contact Us</h2>
-      <button class="button">Contact Us</button>
+      <button class="button" onclick="scrollToAbout()">Contact Us</button>
     </div>
 
     <!-- 3D Model on the Right -->
@@ -42,6 +45,23 @@
       </model-viewer>
     </div>
   </div>
+
+  <!-- About Us Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We are a passionate team of designers and engineers dedicated to creating inclusive solutions for musicians of all abilities.</p>
+
+    <h3>Contact Us</h3>
+    <form>
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label for="message">Your Message:</label>
+      <textarea id="message" placeholder="Write your message..." required></textarea>
+
+      <button type="submit" class="button">Send Message</button>
+    </form>
+  </section>
 
   <!-- Include model-viewer -->
   <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@2.0.1/dist/model-viewer.js"></script>
