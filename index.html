@@ -1,63 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guitar Pick Grip</title>
-    <link rel="stylesheet" href="style.css">
-    <script type="module" src="https://unpkg.com/@google/model-viewer@latest/dist/model-viewer.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guitar Pick Grip</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Main Section -->
-    <div class="container">
-        <div class="content">
-            <h1>Revolutionary Guitar Pick Grip</h1>
-            <p>Designed for musicians with partial hand loss, our innovative guitar pick grip ensures effortless strumming and comfort.</p>
-            
-            <h2>Why Choose Our Grip?</h2>
-            <ul>
-                <li>Secure and adjustable fit</li>
-                <li>Ergonomic design for comfort</li>
-                <li>Durable, lightweight material</li>
-            </ul>
+  <div class="container">
+    <!-- Content on the Left -->
+    <div class="content">
+      <h1>Guitar Pick Grip</h1>
+      <p>Introducing the revolutionary Guitar Pick Grip, designed for individuals with partial hand loss. 
+         Our ergonomic design ensures a comfortable and secure grip for users, allowing them to enjoy playing their favorite instrument.</p>
 
-            <blockquote>"A game-changer for musicians seeking accessibility!" - Professional Guitarist</blockquote>
+      <h2>Why Choose Our Guitar Pick Grip?</h2>
+      <ul>
+        <li>Designed for individuals with partial hand loss.</li>
+        <li>Lightweight and easy to use.</li>
+        <li>Durable and made from high-quality materials.</li>
+      </ul>
 
-            <button class="button" onclick="scrollToAbout()">Contact Us</button>
-        </div>
+      <h2>Testimonials</h2>
+      <blockquote>"This grip has made it possible to play guitar again!" – Sarah D.</blockquote>
+      <blockquote>"It’s a game-changer for people with hand difficulties." – John P.</blockquote>
 
-        <!-- 3D Model (RIGHT SIDE) -->
-        <div class="model-container">
-            <model-viewer id="guitar-pick-model" 
-                          src="finalV5.stl" 
-                          alt="3D model of the guitar pick grip" 
-                          auto-rotate 
-                          camera-controls 
-                          shadow-intensity="1"
-                          style="width: 100%; height: 500px;">
-            </model-viewer>
-        </div>
+      <button class="button" onclick="scrollToAbout()">Contact Us</button>
     </div>
 
-    <!-- About Us Section -->
-    <div id="about">
-        <h2>About Us</h2>
-        <p>We are a passionate team dedicated to making music more accessible for everyone. Our mission is to design innovative solutions that empower musicians of all abilities.</p>
-
-        <h3>Contact Us</h3>
-        <form>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button class="button" type="submit">Send Message</button>
-        </form>
+    <!-- 3D Model on the Right -->
+    <div class="model-container">
+      <model-viewer id="guitarModel" src="assets/finalV5.glb" alt="3D model of guitar pick grip"
+        auto-rotate camera-controls scale="1 1 1"
+        camera-orbit="0deg 75deg 3m"
+        field-of-view="25deg">
+      </model-viewer>
     </div>
+  </div>
 
-    <script>
-        function scrollToAbout() {
-            document.getElementById("about").scrollIntoView({ behavior: "smooth" });
-        }
-    </script>
+  <!-- About Us Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We are a small but passionate team of designers and engineers from the University of Ottawa, dedicated to creating inclusive solutions for musicians of all abilities.</p>
+
+    <h3>Contact Us</h3>
+    <form>
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+
+      <label for="message">Your Message:</label>
+      <textarea id="message" placeholder="Write your message..." required></textarea>
+
+      <button type="submit" class="button">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Include model-viewer -->
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@2.0.1/dist/model-viewer.min.js"></script>
+  <script src="script.js"></script>
+
+  <script>
+    function scrollToAbout() {
+      document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
 
 </body>
 </html>
