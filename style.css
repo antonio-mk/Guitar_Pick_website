@@ -10,31 +10,7 @@ body {
   overflow-y: auto;
 }
 
-/* Navigation Bar */
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: transparent;
-  padding: 10px 20px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav ul li {
-  display: inline;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: black;
-  font-size: 18px;
-}
-
+/* Main container */
 .container {
   display: flex;
   align-items: center;
@@ -42,11 +18,11 @@ nav ul li a {
   max-width: 1200px;
   width: 90%;
   gap: 50px;
-  margin: 80px auto 0;
+  margin: 40px auto;
   padding: 20px;
 }
 
-/* Content Styling (Left Side) */
+/* Content on the left */
 .content {
   flex: 2;
   max-width: 600px;
@@ -92,7 +68,7 @@ blockquote {
   background: #555;
 }
 
-/* 3D Model Styling (Right Side) */
+/* 3D Model (Right Side) */
 .model-container {
   flex: 1;
   max-width: 500px;
@@ -146,4 +122,30 @@ textarea {
 
 form button {
   align-self: center;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .model-container {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  model-viewer {
+    height: 300px; /* Make the model smaller on mobile */
+  }
+
+  #about {
+    width: 90%;
+  }
 }
